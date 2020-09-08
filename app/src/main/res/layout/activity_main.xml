@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tabela de pontos Truco"
+        android:textColor="#030A37"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_vitoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vitória ="
+        android:textColor="#030A37"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_titulo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        android:textColor="#FFD300"
+        android:textSize="26sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_vitoria"
+        app:layout_constraintTop_toBottomOf="@id/tv_titulo" />
+
+    <TextView
+        android:id="@+id/tv_empate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Empate ="
+        android:textColor="#030A37"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_vitoria" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7"
+        android:textColor="#FFD300"
+        android:textSize="26sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_empate"
+        app:layout_constraintTop_toBottomOf="@id/tv_vitoria" />
+
+    <TextView
+        android:id="@+id/tv_derrota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Derrota ="
+        android:textColor="#030A37"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_empate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textColor="#FFD300"
+        android:textSize="26sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_derrota"
+        app:layout_constraintTop_toBottomOf="@id/tv_empate" />
+
+    <EditText
+        android:id="@+id/et_jogador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nome da dupla"
+        android:inputType="text"
+        android:textSize="35sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_derrota"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_ptVitoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Quantidade de vitórias"
+        android:inputType="number"
+        android:textSize="35sp"
+        app:layout_constraintTop_toBottomOf="@id/et_jogador"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_ptEmpate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Quantidade de empate"
+        android:inputType="number"
+        android:textSize="35sp"
+        app:layout_constraintTop_toBottomOf="@id/et_ptVitoria"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/et_ptDerrotas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Quantidade de derrota"
+        android:inputType="number"
+        android:textSize="35sp"
+        app:layout_constraintTop_toBottomOf="@id/et_ptEmpate"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/bt_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="resultado"
+        android:layout_marginTop="30dp"
+        android:paddingHorizontal="120dp"
+        android:paddingVertical="25dp"
+        android:text="Resultado"
+        android:background="#052575"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/et_ptDerrotas" />
+
+    <TextView
+        android:id="@+id/tv_resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:text=""
+        android:textColor="#030A37"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/bt_resultado" />
+</androidx.constraintlayout.widget.ConstraintLayout>
