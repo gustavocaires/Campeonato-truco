@@ -14,7 +14,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun resultado(componente: View) {
-        if (et_ptVitoria.text.toString().length == 0 || et_ptDerrotas.text.toString().length == 0 || et_ptEmpate.text.toString().length == 0 || et_jogador. text.toString().length == 0){
+        if (et_ptVitoria.text.toString().length == 0 || et_ptDerrotas.text.toString().length == 0 ||
+            et_ptEmpate.text.toString().length == 0 || et_jogador. text.toString().length == 0){
+
             tv_resultado.text = "preencha todos os campos corretamente"
             tv_resultado.setTextColor(Color.RED)
             tv_resultado.visibility = View.VISIBLE
